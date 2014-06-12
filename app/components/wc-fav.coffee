@@ -19,6 +19,6 @@ Component = Em.Component.extend
 			@set("starClass","glyphicon-star-empty")
 			todo = "remove"
 
-		@sendAction "action", @get("team"), todo
+		@sendAction "action", @get("item"), todo
 
 `export default Component`

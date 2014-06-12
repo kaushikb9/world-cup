@@ -8,13 +8,15 @@ Controller = Em.ObjectController.extend
 
 	isFav: (()->
 		@get("id") in @get("controllers.favourites.teams").map((team)->team.get("id"))
-	).property("id")
+	).property("id","controllers.favourites.teams.@each.id")
 
 	actions:
 		addToFav: (team, todo)->
 			fav_teams = @get("controllers.favourites.teams")
 			# [todo] - check why this cannot be done
 			# fav_teams.pushObject team 
+
+			console.log todo
 
 			@store.find("team", team.get("id")).then((team)->
 				if todo is "add"

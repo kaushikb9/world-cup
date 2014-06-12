@@ -9,7 +9,7 @@ Route = Em.Route.extend
 
 	
 	setupController: (controller, models) ->
-    	@controllerFor("favourites").set("teams", models.fav_teams.get("teams"));
-    	@controllerFor("teams").set("content", models.teams);
+    	@controllerFor("favourites").set "content", models.fav_teams
+    	@controllerFor("teams").set "content", models.teams
 
 `export default Route`
