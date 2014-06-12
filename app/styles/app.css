@@ -4,8 +4,11 @@ html, body {
 }
 .banner{
 	margin-top: 30px;
-	margin-left: 20px;
 	margin-bottom: 30px;
+}
+
+div.team-fav span.glyphicon-star {
+	color: darkblue;
 }
 
 div.panel-wc {

@@ -1,7 +1,15 @@
 Route = Em.Route.extend
 
 	model: ->
-		@store.find "group"
-		# [{"id":"gre","title":"Greece","code":"GRE"},{"id":"rus","title":"Russia","code":"RUS"},{"id":"ned","title":"Netherlands","code":"NED"},{"id":"ger","title":"Germany","code":"GER"},{"id":"por","title":"Portugal","code":"POR"},{"id":"esp","title":"Spain","code":"ESP"},{"id":"ita","title":"Italy","code":"ITA"},{"id":"cro","title":"Croatia","code":"CRO"},{"id":"fra","title":"France","code":"FRA"},{"id":"eng","title":"England","code":"ENG"},{"id":"sui","title":"Switzerland","code":"SUI"},{"id":"bel","title":"Belgium","code":"BEL"},{"id":"bih","title":"Bosnia-Herzegovina","code":"BIH"},{"id":"alg","title":"Algeria","code":"ALG"},{"id":"civ","title":"Côte d'Ivoire","code":"CIV"},{"id":"gha","title":"Ghana","code":"GHA"},{"id":"cmr","title":"Cameroon","code":"CMR"},{"id":"nga","title":"Nigeria","code":"NGA"},{"id":"mex","title":"Mexico","code":"MEX"},{"id":"usa","title":"United States","code":"USA"},{"id":"hon","title":"Honduras","code":"HON"},{"id":"crc","title":"Costa Rica","code":"CRC"},{"id":"arg","title":"Argentina","code":"ARG"},{"id":"bra","title":"Brazil","code":"BRA"},{"id":"chi","title":"Chile","code":"CHI"},{"id":"uru","title":"Uruguay","code":"URU"},{"id":"col","title":"Colombia","code":"COL"},{"id":"ecu","title":"Ecuador","code":"ECU"},{"id":"aus","title":"Australia","code":"AUS"},{"id":"jpn","title":"Japan","code":"JPN"},{"id":"kor","title":"South Korea","code":"KOR"},{"id":"irn","title":"Iran","code":"IRN"}] 
+		store = @store
+		Ember.RSVP.hash(
+	      	fav_teams: store.find "fav", "fav_teams"
+	      	teams: store.find "team"
+	    )
+
+	
+	setupController: (controller, models) ->
+    	@controllerFor("favourites").set("teams", models.fav_teams.get("teams"));
+    	@controllerFor("teams").set("content", models.teams);
 
 `export default Route`

@@ -18,12 +18,19 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Favourites <b class="caret"></b></a>
               <ul class="dropdown-menu">
-                {{#each fav}}
-                  
+              {{#if controllers.favourites.teams}}
+                <li class="dropdown-header">Teams</li>
+                {{#each team in controllers.favourites.teams}}
+                  <li><a href="#">{{team.title}}</a></li>
                 {{/each}}
-                {{!-- <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li> --}}
+              {{/if}}
+              {{#if controllers.favourites.matches}}
+                <li class="divider"></li>
+                <li class="dropdown-header">Matches</li>
+                {{#each match in controllers.favourites.matches}}
+                  <li><a href="#">{{match.title}}</a></li>
+                {{/each}}
+              {{/if}}
               </ul>
             </li>
           </ul>

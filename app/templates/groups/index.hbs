@@ -1,5 +1,5 @@
 <div class="row">	
-{{#each group in controller}}
+{{#each group in controller itemController="groups/group"}}
 	<div class="col-sm-3 pull-left">
 		<div class="panel panel-wc">
 			<div class="panel-heading">
@@ -18,9 +18,9 @@
 								{{team.points}}
 							</div>
 							<div class="team team-fav">
-								<span class="glyphicon glyphicon-star-empty"></span>
+								{{wc-fav action="addToFav" isFav=isFav team=team}}
 							</div>
-						</div>
+						</div>	
 				{{/each}}
 			</div>
 		</div>
