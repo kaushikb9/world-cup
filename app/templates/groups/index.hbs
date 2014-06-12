@@ -1,0 +1,29 @@
+<div class="row">	
+{{#each group in controller}}
+	<div class="col-sm-3 pull-left">
+		<div class="panel panel-wc">
+			<div class="panel-heading">
+				<h3 class="panel-title">Group {{group.id}}</h3>
+			</div>
+			<div class="panel-body">
+				{{#each team in group.teams itemController="groups/team"}}
+						<div class="teams">
+							<div class="team team-icon">
+								<img {{bind-attr src=teamImg}}>
+							</div>
+							<div class="team team-title">
+								{{team.title}}
+							</div>
+							<div class="team team-points">
+								{{team.points}}
+							</div>
+							<div class="team team-fav">
+								<span class="glyphicon glyphicon-star-empty"></span>
+							</div>
+						</div>
+				{{/each}}
+			</div>
+		</div>
+	</div>
+{{/each}}
+</div>

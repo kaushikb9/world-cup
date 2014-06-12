@@ -1,0 +1,50 @@
+/* Put your CSS here */
+html, body {
+    margin: 20px;
+}
+.banner{
+	margin-top: 30px;
+	margin-left: 20px;
+	margin-bottom: 30px;
+}
+
+div.panel-wc {
+	border-color: #1e5a2e;
+}
+
+div.panel-wc div.panel-heading{
+	color: white;
+	background-color: #1e5a2e;
+}
+.container{
+	width: 1020px;
+}
+
+div.teams{
+	display: table;
+	height: 30px;
+}
+
+div.teams div.team{
+	display: table-cell;
+}
+
+div.teams div.team-icon{
+	width: 27%;
+}
+
+div.teams div.team-title{
+	width: 55%;
+}
+
+div.teams div.team-points{
+	width: 20%;
+}
+
+div.teams div.team-fav{
+	width: 5%;
+}
+
+/*panel-heading
+#1e5a2e
+*/
