@@ -12,8 +12,8 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">Fixtures</a></li>
+            {{#link-to "groups" tagName="li" }}<a>Groups</a>{{/link-to}}
+            {{#link-to "fixtures" tagName="li" }}<a>Fixtures</a>{{/link-to}}
             <li><a href="#contact">Simulate</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Favourites <b class="caret"></b></a>
