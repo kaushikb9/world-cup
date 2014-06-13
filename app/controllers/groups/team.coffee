@@ -12,17 +12,13 @@ Controller = Em.ObjectController.extend
 
 	actions:
 		addToFav: (team, todo)->
-			fav_teams = @get("controllers.favourites.teams")
-			# [todo] - check why this cannot be done
-			# fav_teams.pushObject team 
-
-			console.log todo
-
+			favourites = @get("controllers.favourites")
 			@store.find("team", team.get("id")).then((team)->
 				if todo is "add"
-					fav_teams.pushObject team
+					favourites.get("teams").pushObject team
 				else
-					fav_teams.removeObject team
+					favourites.get("teams").removeObject team
+				favourites.get("content").save()
 			)
 
 `export default Controller`

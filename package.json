@@ -45,7 +45,10 @@
     "grunt-rev": "~0.1.0",
     "grunt-ember-templates": "~0.4.17",
     "grunt-contrib-testem": "~0.5.14",
-    "grunt-contrib-less": "~0.8.2"
+    "grunt-contrib-less": "~0.8.2",
+    "grunt-es6-import-validate": "0.0.7",
+    "grunt-contrib-coffee": "~0.10.1",
+    "request": "~2.36.0"
   },
   "devDependencies": {
     "express": "~3.4.8",
