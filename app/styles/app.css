@@ -12,12 +12,12 @@ ul li a{
 	cursor: pointer;
 }
 
-div.team-fav span.glyphicon-star {
+.fav span.glyphicon-star {
 	cursor: pointer;
 	color: #ff9b00;
 }
 
-div.team-fav span.glyphicon-star-	empty {
+.fav span.glyphicon-star-	empty {
 	cursor: pointer;
 }
 
@@ -54,7 +54,7 @@ div.teams div.team-points{
 	width: 20%;
 }
 
-div.teams div.team-fav{
+div.teams div.fav{
 	width: 5%;
 }
 

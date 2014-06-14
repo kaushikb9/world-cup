@@ -1,0 +1,31 @@
+<table class="table table-striped">
+<thead>
+	<tr>
+		<th>Matchday</th>
+		<th>Date</th>
+		<th>Team 1</th>
+		<th></th>
+		<th>Team 2</th>
+	</tr>
+</thead>
+<tbody>
+{{#each match in controller}}
+	<tr>
+		<td>{{match.matchday.title}}</td>
+		<td>{{match.play_at}}</td>
+		<td>
+			{{match.team1_key.title}}
+		</td>
+		<td>
+			{{match.score1}} - {{match.score2}}
+		</td>
+		<td>
+			{{match.team2_key.title}}
+		</td>
+		<td class="fav">
+			{{wc-fav action="addToFav" isFav=isFav item=team}}
+		</td>
+	</tr>
+{{/each}}		
+</tbody>
+</table>
