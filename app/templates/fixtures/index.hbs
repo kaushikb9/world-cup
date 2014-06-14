@@ -1,11 +1,12 @@
 <table class="table table-striped">
 <thead>
 	<tr>
-		<th>Matchday</th>
-		<th>Date</th>
-		<th>Team 1</th>
-		<th></th>
-		<th>Team 2</th>
+		<th width="10%">Matchday</th>
+		<th width="20%">Date</th>
+		<th width="20%">Team 1</th>
+		<th width="20%">Score</th>
+		<th width="20%">Team 2</th>
+		<th width="5%">Fav</th>
 	</tr>
 </thead>
 <tbody>
@@ -17,7 +18,9 @@
 			{{match.team1_key.title}}
 		</td>
 		<td>
-			{{match.score1}} - {{match.score2}}
+			{{#if match.score1}}
+				{{match.score1}} - {{match.score2}}
+			{{/if}}
 		</td>
 		<td>
 			{{match.team2_key.title}}

@@ -23,16 +23,6 @@ module.exports = function(server) {
           res.send(fav)
         });
 
-        // server.get('/favs', function(req, res){
-        //   var favs = {
-        //     "favs":[
-        //       {"id":"fav_teams", "teams":["bra","eng","ger"]},
-        //       {"id":"fav_matches", "matches":["1-bra:cro","2-esp:ned"]}
-        //     ]
-        //   }
-        //   res.send(favs);
-        // });
-
         server.get('/groups', function(req, res){
           var groups = {
             "groups":[
@@ -188,10 +178,10 @@ module.exports = function(server) {
     server.get('matches', function(req, res){
       var matches = {
         "matches": [
-          {"team1_key":"bra","team2_key":"cro","play_at":"2014/06/12","score1":null,"score2":null,"score1ot":null,"score2ot":null,"score1p":null,"score2p":null,"matchday":1,"id":"1-bra:cro"},
-          {"team1_key":"mex","team2_key":"cmr","play_at":"2014/06/13","score1":null,"score2":null,"score1ot":null,"score2ot":null,"score1p":null,"score2p":null,"matchday":2,"id":"2-mex:cmr"},
-          {"team1_key":"esp","team2_key":"ned","play_at":"2014/06/13","score1":null,"score2":null,"score1ot":null,"score2ot":null,"score1p":null,"score2p":null,"matchday":2,"id":"2-esp:ned"},
-          {"team1_key":"chi","team2_key":"aus","play_at":"2014/06/13","score1":null,"score2":null,"score1ot":null,"score2ot":null,"score1p":null,"score2p":null,"matchday":2,"id":"2-chi:aus"},
+          {"team1_key":"bra","team2_key":"cro","play_at":"2014/06/12","score1":3,"score2":1,"score1ot":null,"score2ot":null,"score1p":null,"score2p":null,"matchday":1,"id":"1-bra:cro"},
+          {"team1_key":"mex","team2_key":"cmr","play_at":"2014/06/13","score1":1,"score2":0,"score1ot":null,"score2ot":null,"score1p":null,"score2p":null,"matchday":2,"id":"2-mex:cmr"},
+          {"team1_key":"esp","team2_key":"ned","play_at":"2014/06/13","score1":5,"score2":1,"score1ot":null,"score2ot":null,"score1p":null,"score2p":null,"matchday":2,"id":"2-esp:ned"},
+          {"team1_key":"chi","team2_key":"aus","play_at":"2014/06/13","score1":3,"score2":1,"score1ot":null,"score2ot":null,"score1p":null,"score2p":null,"matchday":2,"id":"2-chi:aus"},
           {"team1_key":"col","team2_key":"gre","play_at":"2014/06/14","score1":null,"score2":null,"score1ot":null,"score2ot":null,"score1p":null,"score2p":null,"matchday":3,"id":"3-col:gre"},
           {"team1_key":"civ","team2_key":"jpn","play_at":"2014/06/14","score1":null,"score2":null,"score1ot":null,"score2ot":null,"score1p":null,"score2p":null,"matchday":3,"id":"3-civ:jpn"},
           {"team1_key":"uru","team2_key":"crc","play_at":"2014/06/14","score1":null,"score2":null,"score1ot":null,"score2ot":null,"score1p":null,"score2p":null,"matchday":3,"id":"3-uru:crc"},

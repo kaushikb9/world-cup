@@ -4,6 +4,4 @@ Controller = Em.ObjectController.extend
 		@get("content").get("teams")
 	).property("content.teams")
 
-	matches: null
-
 `export default Controller`
